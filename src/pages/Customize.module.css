@@ -1,0 +1,40 @@
+.customizer {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 2.2rem;
+  margin: 2.5rem auto;
+  box-shadow: 0 4px 24px 0 rgba(255, 103, 129, 0.11);
+  padding: 2.3rem 1.2rem;
+}
+
+.customizer h1 {
+  color: var(--brand);
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 2.3rem;
+}
+
+.customizerWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .customizerWrap {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .customizer {
+    padding: 1.2rem 0.6rem;
+  }
+  
+  .customizer h1 {
+    font-size: 1.8rem;
+  }
+}

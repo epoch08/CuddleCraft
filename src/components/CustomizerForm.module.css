@@ -1,0 +1,53 @@
+.customizerForm {
+  flex: 1 1 340px;
+  max-width: 380px;
+}
+
+.formGroup {
+  margin-bottom: 1.6rem;
+}
+
+.formGroup label {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  display: block;
+  color: var(--brand);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.selectBtn {
+  background: var(--white);
+  color: var(--brand);
+  border: 2px solid var(--brand);
+  border-radius: 999px;
+  padding: 0.7em 1.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 0.4rem;
+  transition: background 0.16s, color 0.16s, transform 0.13s;
+}
+
+.selectBtn.selected,
+.selectBtn:active {
+  background: var(--brand);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.fileInput {
+  width: 100%;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 900px) {
+  .customizerForm {
+    max-width: 100%;
+  }
+}

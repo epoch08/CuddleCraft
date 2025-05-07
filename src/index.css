@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #FFB6B9;
+  --secondary: #F9D5A7;
+  --accent: #A2E4B8;
+  --brand: #FF6781;
+  --white: #fff;
+  --bg: linear-gradient(135deg, #FFB6B9 0%, #A2E4B8 100%);
+}
+
+html, body {
+  margin: 0; 
+  padding: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: #373737;
+}
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+h1, h2, h3 { 
+  font-family: 'Poppins', sans-serif; 
+  margin: 0; 
+}
+
+h2 { 
+  font-size: 2rem; 
+}
+
+h1 { 
+  font-size: 2.2rem; 
+}
+
+.btn {
+  padding: 0.5em 1.6em;
+  border-radius: 999px;
+  background: var(--brand);
+  color: var(--white);
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 3px 16px 0 rgba(255,103,129,0.13);
+  outline: none;
+  display: inline-block;
+}
+
+.btn.primary { 
+  background: var(--brand);
+}
+
+.btn.big { 
+  font-size: 1.2rem; 
+  padding: 1em 2.5em;
+}
+
+.btn:hover, .select-btn.selected { 
+  background: var(--primary); 
+  transform: scale(1.06);
+}
+
+.btn.fullwidth { 
+  width: 100%; 
+  margin-top: 1.5em; 
+}
+
+main { 
+  padding: 0 1rem; 
+}
+
+.float { 
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float { 
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-24px); } 
+}
+
+.back-link {
+  display: inline-block;
+  margin: 2rem 0 1rem 0.2rem;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 1.06rem;
+  transition: color 0.15s;
+}
+
+.back-link:hover { 
+  color: var(--primary); 
+  text-decoration: underline; 
+}
+
+@media (max-width: 900px) {
+  .customizer-wrap { 
+    flex-direction: column; 
+    gap: 2.5rem; 
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero { 
+    flex-direction: column; 
+    padding: 3.4rem 0 1.7rem 0;
+  }
+  .hero-content { 
+    margin-right: 0; 
+    max-width: 100%; 
+  }
+}
