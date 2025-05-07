@@ -11,7 +11,7 @@ const PlushiePreview: React.FC<PlushiePreviewProps> = ({ customizer }) => {
     <div className={styles.preview}>
       <div className={styles.previewImgWrap}>
         <img 
-          src={'./zzz.png'} 
+          src={'https://github.com/epoch08/CuddleCraft/blob/main/src/zzz.png?raw=true'} 
           alt="Plushie Preview" 
           id="preview-img" 
           className={styles.previewImg}

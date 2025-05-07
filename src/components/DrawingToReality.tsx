@@ -12,19 +12,19 @@ const DrawingToReality: React.FC = () => {
   const examples: ExampleItem[] = [
     {
       id: 1,
-      image: "./anv.jpeg",
+      image: "https://github.com/epoch08/CuddleCraft/blob/main/src/anv.jpeg?raw=true",
       alt: "Penguin plushie with drawing",
       description: "A cute penguin plushie brought to life from a simple sketch"
     },
     {
       id: 2,
-      image: "./par.jpeg",
+      image: "https://github.com/epoch08/CuddleCraft/blob/main/src/par.jpeg?raw=true",
       alt: "Panda plushie with drawing",
       description: "An adorable panda with bamboo transformed from artwork"
     },
     {
       id: 3,
-      image: "./mah.jpeg",
+      image: "https://github.com/epoch08/CuddleCraft/blob/main/src/mah.jpeg?raw=true",
       alt: "Teddy bear plushie with drawing",
       description: "A heartwarming teddy bear created from a charming sketch"
     }

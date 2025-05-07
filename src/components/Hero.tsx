@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         </Link>
       </div>
       <img 
-        src="./zzz.png" 
+        src="https://github.com/epoch08/CuddleCraft/blob/main/src/zzz.png?raw=true" 
         alt="Custom Plushie" 
         className={`${styles.heroImg} float`} 
       />
