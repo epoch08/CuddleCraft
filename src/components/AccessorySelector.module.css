@@ -1,0 +1,165 @@
+.accessorySelector {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.accessoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.accessoryCard {
+  border: 2px solid #e0e0e0;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background: white;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.accessoryCard:hover {
+  border-color: var(--brand);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 103, 129, 0.15);
+}
+
+.accessoryCard.selected {
+  border-color: var(--brand);
+  background: rgba(255, 103, 129, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 103, 129, 0.2);
+}
+
+.accessoryIcon {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  animation: bounce 2s infinite;
+}
+
+.accessoryCard.selected .accessoryIcon {
+  animation: celebrate 0.6s ease;
+}
+
+.accessoryInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accessoryName {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.accessoryPrice {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(162, 228, 184, 0.2);
+  padding: 0.1em 0.4em;
+  border-radius: 999px;
+}
+
+.selectedBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--brand);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  animation: badgePop 0.3s ease;
+}
+
+.selectedSummary {
+  background: rgba(255, 103, 129, 0.05);
+  border: 1px solid rgba(255, 103, 129, 0.2);
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+}
+
+.selectedSummary h6 {
+  margin: 0 0 0.5rem 0;
+  color: var(--brand);
+  font-size: 0.9rem;
+}
+
+.selectedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.selectedItem {
+  background: white;
+  border: 1px solid rgba(255, 103, 129, 0.3);
+  border-radius: 999px;
+  padding: 0.3em 0.8em;
+  font-size: 0.8rem;
+  color: var(--brand);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.2) rotate(-10deg); }
+  50% { transform: scale(1.3) rotate(10deg); }
+  75% { transform: scale(1.2) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes badgePop {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .accessoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+  
+  .accessoryCard {
+    padding: 0.6rem;
+  }
+  
+  .accessoryIcon {
+    font-size: 1.5rem;
+  }
+  
+  .accessoryName {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,174 @@
+.templateGallery {
+  background: white;
+  border: 2px solid rgba(255, 103, 129, 0.1);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  animation: slideIn 0.3s ease;
+}
+
+.title {
+  color: var(--brand);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.categorySection {
+  margin-bottom: 2rem;
+}
+
+.categoryTitle {
+  color: var(--brand);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 103, 129, 0.2);
+}
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.templateCard {
+  border: 2px solid #e0e0e0;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.templateCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand);
+  box-shadow: 0 8px 25px rgba(255, 103, 129, 0.15);
+}
+
+.templateCard.selected {
+  border-color: var(--brand);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 103, 129, 0.25);
+}
+
+.templateImage {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+
+.templateImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.templateCard:hover .templateImage img {
+  transform: scale(1.1);
+}
+
+.selectedOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 103, 129, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFade 0.3s ease;
+}
+
+.checkIcon {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: checkBounce 0.5s ease;
+}
+
+.templateInfo {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.templateName {
+  margin: 0 0 0.3rem 0;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.templatePrice {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(162, 228, 184, 0.2);
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes checkBounce {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .templateGallery {
+    padding: 1rem;
+  }
+  
+  .templateGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .templateImage {
+    height: 100px;
+  }
+  
+  .templateInfo {
+    padding: 0.6rem;
+  }
+  
+  .templateName {
+    font-size: 0.8rem;
+  }
+  
+  .checkIcon {
+    font-size: 1.5rem;
+  }
+}
