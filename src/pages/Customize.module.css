@@ -1,5 +1,5 @@
 .customizer {
-  max-width: 900px;
+  max-width: 1200px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 2.2rem;
   margin: 2.5rem auto;
@@ -21,11 +21,21 @@
   justify-content: center;
 }
 
-@media (max-width: 900px) {
+.formSection {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+@media (max-width: 1000px) {
   .customizerWrap {
     flex-direction: column;
     gap: 2.5rem;
     align-items: center;
+  }
+  
+  .formSection {
+    max-width: 100%;
   }
 }
 
@@ -36,5 +46,9 @@
   
   .customizer h1 {
     font-size: 1.8rem;
+  }
+  
+  .formSection {
+    min-width: 100%;
   }
 }

@@ -1,0 +1,133 @@
+.priceCalculator {
+  background: white;
+  border: 2px solid rgba(255, 103, 129, 0.1);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 20px rgba(255, 103, 129, 0.08);
+}
+
+.title {
+  color: var(--brand);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.priceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.itemName {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.itemPrice {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.accessorySection {
+  margin-top: 0.5rem;
+}
+
+.sectionTitle {
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  margin: 1rem 0 0.8rem 0;
+  border-radius: 2px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  background: rgba(255, 103, 129, 0.05);
+  border-radius: 0.8rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.totalLabel {
+  color: var(--brand);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.totalPrice {
+  color: var(--brand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  animation: priceGlow 2s ease-in-out infinite;
+}
+
+.estimatedTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  background: rgba(162, 228, 184, 0.1);
+  border-radius: 0.5rem;
+}
+
+.timeIcon {
+  font-size: 1rem;
+  animation: tick 1s infinite;
+}
+
+@keyframes priceGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 103, 129, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 103, 129, 0.6);
+  }
+}
+
+@keyframes tick {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .priceCalculator {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+  
+  .totalPrice {
+    font-size: 1.2rem;
+  }
+  
+  .estimatedTime {
+    font-size: 0.8rem;
+  }
+}

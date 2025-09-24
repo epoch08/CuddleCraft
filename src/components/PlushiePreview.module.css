@@ -1,14 +1,14 @@
 .preview {
   flex: 1 1 330px;
-  max-width: 360px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .previewImgWrap {
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   background: #f8f8f8;
   border-radius: 2rem;
   overflow: hidden;
@@ -16,41 +16,229 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px 0 rgba(162, 228, 184, 0.09);
+  box-shadow: 0 4px 20px rgba(162, 228, 184, 0.15);
+  border: 4px solid #e0e0e0;
+  transition: all 0.3s ease;
 }
 
 .previewImg {
-  width: 75%;
+  width: 80%;
   height: auto;
   opacity: 0.9;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.preview:hover .previewImg {
+  transform: scale(1.05);
 }
 
 .previewSize {
   position: absolute;
-  top: 10px;
-  left: 12px;
+  top: 12px;
+  left: 15px;
   background: var(--brand);
   color: #fff;
-  font-size: 0.95rem;
-  padding: 0.25em 0.9em;
+  font-size: 0.9rem;
+  padding: 0.3em 1em;
   border-radius: 999px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  animation: bounce 2s infinite;
+}
+
+.previewColor {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: colorGlow 3s ease-in-out infinite;
+}
+
+.previewDetails {
+  margin-top: 1.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
 }
 
 .previewService {
-  margin-top: 1.2rem;
   background: var(--accent);
   color: #17715e;
   border-radius: 999px;
   font-weight: 700;
-  padding: 0.46em 1.4em;
-  font-size: 1.05rem;
+  padding: 0.5em 1.6em;
+  font-size: 1rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.previewMaterial {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(162, 228, 184, 0.2);
+  color: #17715e;
+  padding: 0.4em 1.2em;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.materialIcon {
+  font-size: 1.1rem;
+  animation: leaf 3s ease-in-out infinite;
+}
+
+.previewAccessories {
+  text-align: center;
+}
+
+.accessoryTitle {
+  color: var(--brand);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.accessoryIcons {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.accessoryIcon {
+  font-size: 1.3rem;
+  background: white;
+  border: 2px solid rgba(255, 103, 129, 0.2);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: accessoryFloat 4s ease-in-out infinite;
+  cursor: help;
+}
+
+.accessoryIcon:nth-child(even) {
+  animation-delay: 1s;
+}
+
+.previewPrice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--brand), #e91e63);
+  color: white;
+  padding: 0.6em 1.4em;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 15px rgba(255, 103, 129, 0.3);
+}
+
+.priceLabel {
+  font-weight: 600;
+}
+
+.priceValue {
+  font-weight: 700;
+  font-size: 1.2rem;
+  animation: priceShine 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes colorGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes leaf {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes accessoryFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes priceShine {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
 }
 
 @media (max-width: 900px) {
   .preview {
     max-width: 100%;
+  }
+  
+  .previewImgWrap {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .previewImgWrap {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .previewSize,
+  .previewColor {
+    font-size: 0.8rem;
+    padding: 0.2em 0.7em;
+  }
+  
+  .accessoryIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
   }
 }
